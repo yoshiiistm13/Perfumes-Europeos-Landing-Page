@@ -1,0 +1,11 @@
+.features{
+    background-color: #012e5c;
+    height: 100vh;
+}
+
+.features__container{
+    height: 15rem;
+    background-color: aliceblue;
+    display: inline-block;
+}
+

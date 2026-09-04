@@ -1,0 +1,223 @@
+/* =========================================
+   1. Estilos Globales y Reset
+   ========================================= */
+
+
+
+
+/* =========================================
+   2. Contenedor Principal (.form)
+   ========================================= */
+.form {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    /* Activamos Grid Layout */
+    display: grid;
+    
+    /* Definimos las columnas: 1 fracción para el form, 3 fracciones para la descripción */
+    grid-template-columns: 1fr 3fr; 
+    
+    /* Alineación vertical al centro */
+    align-items: center;
+    
+    /* Altura y ancho de pantalla completo */
+    min-height: 100vh;
+
+    
+    /* Espacio entre columnas */
+    gap: 40px;
+    
+    /* Padding alrededor de todo el grid */
+    padding: 50px;
+
+    background-color: #012e5c;
+    height: 100vh;
+    }
+    
+
+
+    /* --- FONDOS MÚLTIPLES (Degradado + Imagen)
+    background-image:
+        linear-gradient(
+            rgba(2, 66, 131, 0.85), 
+            rgba(2, 66, 131, 0.85)
+        ),
+        url('../assets/Banner_Franquicias.webp');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fondo fijo al hacer scroll */ --- */
+
+
+/* =========================================
+   3. Columna Izquierda: Formulario
+   ========================================= */
+.form__container {
+    height: 60vh;
+    display: flex;
+    justify-content: center; /* Centra la tarjeta en su columna de 1/4 */
+}
+
+.form__info {
+    /* --- TUS ESTILOS ORIGINALES DE LA TARJETA --- */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px; /* Espaciado vertical entre grupos */
+    box-sizing: border-box;
+    background-color: #024283; /* Color azul sólido de la tarjeta */
+    
+    /* --- TAMAÑO Y UBICACIÓN --- */
+    width: 100%;
+    width: 650px; /* Ancho máximo para que no se estire demasiado */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra para que resalte */
+}
+
+/* Grupo de campo (Label + Input + Small) */
+.form__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --- TUS ESTILOS ORIGINALES DE LABELS --- */
+.form__info label {
+    font-weight: 600;
+    color: aliceblue; /* Texto blanco para que resalte en la tarjeta azul */
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* --- TUS ESTILOS ORIGINALES DE INPUTS Y SELECTS --- */
+.form__info input,
+.form__info select {
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    padding: 0 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Fondo blanco en los inputs */
+    color: #1f2937; /* Texto oscuro al escribir */
+}
+
+/* Estilo cuando el input recibe el foco */
+.form__info input:focus,
+.form__info select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 66, 131, 0.3); /* Resplandor azul suave */
+}
+
+/* Estilizado del select */
+select {
+    cursor: pointer;
+}
+
+option {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* --- TUS ESTILOS ORIGINALES DE SMALL (TEXTO AYUDA) --- */
+.form__info .form-text {
+    font-size: 0.85rem;
+    color: #e0e0e0; /* Gris muy claro para legibilidad en fondo azul */
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* --- TUS ESTILOS ORIGINALES DEL BOTÓN --- */
+.form__info button {
+    margin-top: 10px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    background-color: #dc2626; /* Rojo corporativo */
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form__info button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px); /* Pequeña elevación al pasar el mouse */
+}
+
+/* =========================================
+   4. Columna Derecha: Descripción
+   ========================================= */
+.form__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff; /* Texto blanco sobre el fondo del header */
+    padding-right: 30px;
+}
+
+.form__description h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.form__description p {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    opacity: 0.9; /* Párrafos ligeramente transparentes */
+}
+
+option{
+    background-color: #012e5cCC;
+    color: aliceblue;
+}
+
+/* =========================================
+   5. Diseño Adaptativo (Responsive)
+   ========================================= */
+@media (max-width: 992px) {
+    .form {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+        gap: 30px;
+        padding: 30px;
+        min-height: auto;
+        background-attachment: scroll;
+    }
+
+    /* La descripción va ARRIBA del formulario en móviles */
+    .form__description {
+        order: -1; 
+        text-align: center;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .form__description h2 {
+        font-size: 2.2rem;
+    }
+    
+    .form__description p {
+        font-size: 1.1rem;
+    }
+
+    .form__container {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .form__info {
+        max-width: 100%; /* El form ocupa todo el ancho en móvil */
+    }
+}

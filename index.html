@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Europeos Franquicias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            
+            <div class="header__content">
+                <div class="header__info">
+                    <div class="header__logo">
+                <img src="./assets/Logo Bco.png" width="200px" alt="">
+            </div>
+                    <h1 class="header__title"><b>Invierte en una Franquicia Europea</b></h1>
+                    <p class="header__text">Únete a una red de éxito comprobado con la perfumería líder en Europa. Rentabilidad y respaldo internacional para tu inversión.</p>
+                    <a class="header__btn" href="#form">Tú proxima oportunidad de negocio</a>
+                </div>
+
+                <div class="header__img">
+                    <img class="header__img-oso" src="./assets/perfumes franquicia II.png" alt="">
+                </div>
+            </div>
+        </header>
+        <section class="form" id="form">
+        
+        <!-- 
+          COLUMNA IZQUIERDA (1/4)
+          Contenedor del formulario blanco.
+        -->
+        <div class="form__container">
+            <form class="form__info" action="/procesar-franquicia" method="POST">
+                
+                <!-- Campo: Nombre completo -->
+                <div class="form__group form__name">
+                    <label for="name">Nombre completo *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="nombre_completo" 
+                        placeholder="Ej. Ana García López" 
+                        required 
+                        autocomplete="name" 
+                        minlength="4" 
+                        maxlength="100"
+                        aria-describedby="name-help"
+                    >
+                    
+                </div>
+
+                <!-- Campo: Correo Electrónico -->
+                <div class="form__group form__mail">
+                    <label for="mail">Correo Electrónico *</label>
+                    <input 
+                        type="email" 
+                        id="mail" 
+                        name="email" 
+                        placeholder="ejemplo@correo.com" 
+                        required 
+                        autocomplete="email" 
+                        pattern="[^@]+@[^.]+\..+" 
+                        title="El correo debe tener un formato válido (ej. usuario@dominio.com)"
+                        aria-describedby="mail-help"
+                    >
+                    
+                </div>
+
+                <!-- Campo: Teléfono -->
+                <div class="form__group form__tel">
+                    <label for="phone">Teléfono celular o WhatsApp *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="telefono" 
+                        placeholder="Ej. 5512345678" 
+                        required 
+                        autocomplete="tel" 
+                        pattern="^[0-9]{9,15}$" 
+                        title="Solo números. Mínimo 9, máximo 15 dígitos."
+                        aria-describedby="phone-help"
+                    >
+                    
+                </div>
+
+                <!-- Campo: Estado/Ciudad de interés -->
+                <div class="form__group form__estado">
+                    <label for="place">¿Dónde quieres poner tu franquicia? *</label>
+                    <select 
+                        name="estado_franquicia" 
+                        id="place" 
+                        required 
+                        aria-describedby="place-help"
+                    >
+                        <option value="" disabled selected>-- Selecciona tu estado --</option>
+                        <option value="cdmx">CDMX</option>
+                        <option value="edo_mex">Edo Mex</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="puebla">Puebla</option>
+                        <option value="queretaro">Querétaro</option>
+                        <option value="monterrey">Monterrey</option>
+                        <option value="otro_estado">Otro estado de la republica</option>
+                    </select>
+                    
+                </div>
+
+                <!-- Campo: Capital de inversión -->
+                <div class="form__group form__capital">
+                    <label for="capital">¿Con qué capital de inversión cuentas? *</label>
+                    <select 
+                        name="monto_inversion" 
+                        id="capital" 
+                        required 
+                        aria-describedby="capital-help"
+                    >
+                        <option value="" disabled selected>-- Selecciona tu rango de capital --</option>
+                        <option value="250000-500000">De 250,000 a 500,000 MXN</option>
+                        <option value="500000-750000">De 500,000 a 750,000 MXN</option>
+                        <option value="750000-1000000">De 750,000 a 1,000,000 MXN</option>
+                        <option value="mas_1000000">Más de 1,000,000 MXN</option>
+                    </select>
+                    
+                </div>
+
+                <!-- Botón de Enviar -->
+                <button type="submit">Enviar Solicitud</button>
+
+            </form>
+        </div>
+
+        <!-- 
+          COLUMNA DERECHA (3/4)
+          Contenedor del texto descriptivo (Corresponde a la clase .form__description en tu CSS).
+        -->
+        <div class="form__description">
+            <h2>¡Sé parte de Perfumes Europeos!</h2>
+            <p>Únete a nuestra exitosa red de franquicias y emprende en el rentable negocio de la perfumería de alta calidad.</p>
+            <p>Completa el formulario para recibir nuestro dossier informativo, plan de negocio y asesoría personalizada sin compromiso.</p>
+        </div>
+
+    </section>
+
+    <section class="features">
+        <div class="features__container">
+            
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>
