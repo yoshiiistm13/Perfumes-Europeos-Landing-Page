@@ -4,3 +4,10 @@ body{
     box-sizing: border-box;
 }
 
+.whatsapp-float{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+}
