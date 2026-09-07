@@ -40,11 +40,15 @@ header{
     opacity: 0.9;
 }
 
+.header__img{
+    height: 100vh;
+}
+
 .header__btn{
     text-decoration: none;
     color: aliceblue;
     padding: 20px;
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     border-radius: 20px;
     display: inline-block;
     margin-top: 20px;
