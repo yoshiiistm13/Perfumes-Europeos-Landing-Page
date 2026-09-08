@@ -1,36 +1,42 @@
-.features{
+/* =========================================
+   ESTILOS BASE - FEATURES (Desktop)
+   ========================================= */
+.features {
     background-color: #012e5c;
-    height: 100vh;
-    width: 100wh;
+    min-height: 100vh; /* Cambiado de height a min-height para que crezca de manera natural */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 100px 20px;
     font-family: "Roboto", sans-serif;
     color: aliceblue;
+    box-sizing: border-box;
 }
 
-.features__title{
+.features__title {
     font-size: 3rem;
     padding-top: 2rem;
-}
-
-.features__container{
-    margin-bottom: 5rem;
-    padding: 1rem 5rem;
-    gap: 5rem;
-    height: 20rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    color: aliceblue;
-    
-    justify-items: center;
-    align-items: center;
     text-align: center;
 }
 
-.features__img{
+.features__container {
+    margin-bottom: 5rem;
+    padding: 1rem 2rem;
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: aliceblue;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.features__img {
     height: 120px;
     width: 120px;
     padding-bottom: 2rem;
@@ -38,16 +44,64 @@
     fill: currentColor;
 }
 
-.features__container-item{
+.features__container-item {
     border-radius: 20px;
     padding: 2rem;
+    background-color: transparent; /* O el color base que uses */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
-
-.features__container-item:hover{
+.features__container-item:hover {
     background-color: rgba(255, 0, 0, 0.801);
     border-radius: 20px;
     padding: 2rem;
-    transition: color 0.s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
+
+/* =========================================
+   MEDIA QUERY RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    .features {
+        min-height: auto !important; /* Libera la altura fija para que no se encime */
+        height: auto !important;
+        padding: 60px 15px !important;
+        margin-top: 0 !important;   /* Evita superposiciones con la sección previa */
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important; /* Mantiene la sección en su flujo natural de HTML */
+    }
+
+    .features__title {
+        font-size: 1.8rem !important;
+        padding-top: 0 !important;
+        margin-bottom: 30px !important;
+        line-height: 1.3 !important;
+    }
+
+    .features__container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Una tarjeta por fila en celulares */
+        height: auto !important;
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .features__container-item {
+        width: 100% !important;
+        padding: 25px 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .features__img {
+        height: 70px !important;
+        width: 70px !important;
+        padding-bottom: 1rem !important;
+    }
+}

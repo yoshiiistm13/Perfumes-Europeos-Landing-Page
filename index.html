@@ -219,7 +219,72 @@
             </div>
         </div>
     </section>
+
+
+<!-- Nivel 1: Sección Principal -->
+<section class="carrusel__section">
+
+    <!-- Nivel 2: Wrapper (limita el ancho máximo) -->
+    <div class="carrusel__wrapper">
+        
+        <!-- Nivel 3: EL VIEWPORT (LA MÁSCARA / EL ESCENARIO) -->
+        <div class="carrusel__viewport" id="carruselViewport">
+            
+            <!-- 
+               Nivel 4: EL TRACK (EL CARRIL QUE SE MUEVE) 
+               ¡CORREGIDO! Aquí es donde debe ir el ID y la clase. 
+               Y dentro, directamente las 10 fotos, sin divs intermedios innecesarios.
+            -->
+            <div class="carrusel__track" id="carruselTrack">
+                
+                <!-- Nivel 5: LOS ITEMS (Tus 10 fotos originales) -->
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/01.png" alt="Perfume 01">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/02.png" alt="Perfume 02">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/03.png" alt="Perfume 03">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/04.png" alt="Perfume 04">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/05.png" alt="Perfume 05">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/06.png" alt="Perfume 06">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/07.png" alt="Perfume 07">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/08.png" alt="Perfume 08">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/09.png" alt="Perfume 09">
+                </div>
+                <div class="carrusel__container-item">
+                    <img src="assets/Carrusel/10.png" alt="Perfume 10">
+                </div>
+
+            </div> <!-- Fin del Track Corregido -->
+        </div> <!-- Fin del Viewport -->
+
+        <!-- Botones (Fuera del viewport, dentro del wrapper) -->
+        <button class="carrusel__btn carrusel__btn--prev" id="btnPrev" aria-label="Anterior">&#10094;</button>
+        <button class="carrusel__btn carrusel__btn--next" id="btnNext" aria-label="Siguiente">&#10095;</button>
+        
+    </div> <!-- Fin del Wrapper -->
+</section> <!-- Fin de la sección -->
+
     </div>
 </body>
+<!-- 1. PRIMERO, carga la librería de Swiper (ya sea por CDN o localmente) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- 2. DESPUÉS, carga tu propio archivo donde inicializas Swiper -->
+<script src="script.js"></script>
 
 </html>

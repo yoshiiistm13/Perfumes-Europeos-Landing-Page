@@ -59,3 +59,109 @@ header{
 .header__img-oso{
     height: 100vh;
 }
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVE (MOBILE) - Header
+   ========================================= */
+
+/* Usamos un estándar habitual: breakpoint en 768px */
+/* =========================================
+   ADAPTACIÓN RESPONSIVE (MOBILE) - Header
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Ajuste de la Sección Header */
+    .header {
+       
+        padding: 40px 0 20px 0; 
+        height: auto; 
+        min-height: auto;
+        overflow: hidden; /* Evita barras de desplazamiento laterales */
+    }
+
+    /* 2. El Contenedor Principal */
+    .header__content {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        padding: 0 20px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 3. La Columna de Información (Texto) */
+    .header__info {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* 4. El Logo */
+    .header__logo img {
+        width: 140px; 
+        margin-bottom: 2rem; 
+
+    }
+
+    /* 5. El Título (H1) */
+    .header__title {
+        font-size: 1.7rem; 
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    /* 6. El Texto Descriptivo */
+    .header__text {
+        font-size: 0.95rem;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    /* 7. El Botón CTA */
+    .header__btn {
+        width: 100%;       
+        max-width: 320px; 
+        padding: 16px 20px; 
+        font-size: 1.05rem;  
+        margin-top: 10px;   
+        display: block; 
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    .header__img {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: flex-end !important; /* Pega la caja al lado derecho */
+        align-items: flex-end !important;     /* Pega la caja hacia abajo */
+        overflow: hidden !important;          /* Oculta los sobrantes limpios por fuera */
+        position: relative !important;
+        height: 350px !important;             /* Le damos una altura fija al contenedor en móvil para que tenga espacio */
+    }
+
+    .header__img-oso, 
+    .img-mobile {
+        /* Usamos un ancho fijo grande pero controlado en porcentaje de pantalla */
+        width: 200% !important;               /* Un poco más ancha que la pantalla para asegurar buen tamaño */
+        max-width: none !important;
+        height: auto !important;
+        
+        content: url('../assets/perfumesfranquicia.png') !important;
+        
+        /* Cero escalas raras: posicionamiento directo y limpio */
+        transform: none !important;           
+        
+        /* Anclada firmemente abajo y a la derecha por fuera del borde */
+        position: absolute !important;
+        right: -15px !important;              /* Se sale ligeramente a la derecha para cubrir el borde */
+        bottom: -15px !important;             /* Toca y sobresale un poco del suelo inferior */
+        
+        display: block !important;
+        object-fit: contain !important;
+    }
+
+    
+}

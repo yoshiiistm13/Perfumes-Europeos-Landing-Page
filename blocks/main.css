@@ -1,13 +1,47 @@
-body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.whatsapp-float{
+body {
+    font-family: 'Roboto', sans-serif; /* Mantiene la tipografía que importaste en el HTML */
+    background-color: #012e5c;         /* Color base corporativo de fondo */
+    color: #ffffff;                    /* Color de texto por defecto */
+    overflow-x: hidden;                /* Evita scroll horizontal indeseado */
+}
+
+/* =========================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================= */
+
+.whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 80px;
-    height: 80px;
+    width: 65px;  /* Ajustado ligeramente a 65px para que sea cómodo en mobile y desktop */
+    height: 65px;
+    z-index: 1000; /* Garantiza que esté siempre por encima de cualquier sección */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3)); /* Sombra sombreada para que resalte */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el cursor */
+}
+
+/* Ajuste opcional para celulares muy pequeños */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;  
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
 }
