@@ -9,21 +9,26 @@ header{
 
 .header__logo{
     display: inline-block;
+    margin-bottom: 50px;
+    
 }
 
 .header__content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     
 }
 
 .header__info{
+    display: flex;
+    flex-direction: column;
     font-family: "Roboto", sans-serif;
     color: aliceblue;
     padding: 10px;
     margin: 50px;
+    gap: 20px;
 }
 
 .header__title{
@@ -54,6 +59,8 @@ header{
     margin-top: 20px;
     font-weight: bolder;
     box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.5);
+    width: max-content !important; 
+    align-self: flex-start !important;
 }
 
 .header__img-oso{
@@ -73,10 +80,16 @@ header{
     /* 1. Ajuste de la Sección Header */
     .header {
        
-        padding: 40px 0 20px 0; 
-        height: auto; 
-        min-height: auto;
+        
+       
         overflow: hidden; /* Evita barras de desplazamiento laterales */
+        height: 100vh;
+        background-image:
+        linear-gradient(to bottom, rgba(2, 66, 131, 1) 40%, rgba(2, 66, 131, 0) 100%),
+        url('/assets/Tienda\ BG.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100px
     }
 
     /* 2. El Contenedor Principal */
@@ -97,13 +110,17 @@ header{
         flex-direction: column;
         align-items: center;
         gap: 12px;
+        
+    }
+
+    .header__logo{
+        margin-bottom: 20px;
     }
 
     /* 4. El Logo */
     .header__logo img {
         width: 140px; 
-        margin-bottom: 2rem; 
-
+        z-index: 100;
     }
 
     /* 5. El Título (H1) */
@@ -111,6 +128,7 @@ header{
         font-size: 1.7rem; 
         line-height: 1.2;
         margin: 0;
+        z-index: 100;
     }
 
     /* 6. El Texto Descriptivo */
@@ -118,6 +136,7 @@ header{
         font-size: 0.95rem;
         margin: 0;
         max-width: 100%;
+        z-index: 100;
     }
 
     /* 7. El Botón CTA */
@@ -126,42 +145,33 @@ header{
         max-width: 320px; 
         padding: 16px 20px; 
         font-size: 1.05rem;  
-        margin-top: 10px;   
+        margin-top: 20px;   
         display: block; 
+        margin: 0 auto;
         box-sizing: border-box;
         z-index: 100;
     }
 
     .header__img {
-        width: 100% !important;
         display: flex !important;
-        justify-content: flex-end !important; /* Pega la caja al lado derecho */
-        align-items: flex-end !important;     /* Pega la caja hacia abajo */
-        overflow: hidden !important;          /* Oculta los sobrantes limpios por fuera */
-        position: relative !important;
-        height: 350px !important;             /* Le damos una altura fija al contenedor en móvil para que tenga espacio */
+        justify-content: center !important;
+        align-items: center !important;
+        
+        
+        
+        
     }
 
     .header__img-oso, 
     .img-mobile {
-        /* Usamos un ancho fijo grande pero controlado en porcentaje de pantalla */
-        width: 200% !important;               /* Un poco más ancha que la pantalla para asegurar buen tamaño */
-        max-width: none !important;
-        height: auto !important;
+        content: url('../assets/perfumes%20mano.png') !important;
+        width: 100% !important;         /* Hace que la imagen abarque el 100% del ancho del contenedor o pantalla */
+        height: auto !important;        /* Mantiene la proporción automática para que nunca se deforme ni se estire de más */
+        display: block !important;      /* Elimina espacios fantasma o de línea base que dejan los navegadores por defecto */
+        object-fit: cover !important;   /* Opcional: útil si le das un alto fijo y quieres que llene el espacio sin perder proporción */
+        margin-top: 50px;
+        position: absolute;
+                
         
-        content: url('../assets/perfumesfranquicia.png') !important;
-        
-        /* Cero escalas raras: posicionamiento directo y limpio */
-        transform: none !important;           
-        
-        /* Anclada firmemente abajo y a la derecha por fuera del borde */
-        position: absolute !important;
-        right: -15px !important;              /* Se sale ligeramente a la derecha para cubrir el borde */
-        bottom: -15px !important;             /* Toca y sobresale un poco del suelo inferior */
-        
-        display: block !important;
-        object-fit: contain !important;
     }
-
-    
 }

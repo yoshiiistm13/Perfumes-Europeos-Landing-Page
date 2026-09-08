@@ -128,7 +128,8 @@
 
     /* El track mantiene el comportamiento de fila para que JS lo desplace */
     .carrusel__track {
-        gap: 0 !important; /* Sin espacio extra para que cada tarjeta encaje perfecto a pantalla completa */
+        gap: 0px !important; /* Sin espacio extra para que cada tarjeta encaje perfecto a pantalla completa */
+        
     }
 
     /* FUNDAMENTAL: Cada tarjeta pasa a medir exactamente el 100% del ancho de la pantalla 
@@ -137,7 +138,8 @@
         width: 100% !important;      /* Ocupa todo el ancho visible del celular */
         min-width: 100% !important;  /* Evita que flexbox la comprima */
         height: 350px !important;    /* Altura ideal para la foto en mobile */
-        border-radius: 0 !important; /* Opcional: bordes rectos de lado a lado estilo app móvil */
+        border-radius: 12px !important; /* Opcional: bordes rectos de lado a lado estilo app móvil */
+        
     }
 
     /* Botones de navegación más cómodos sobre la imagen */

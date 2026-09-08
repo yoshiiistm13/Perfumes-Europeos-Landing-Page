@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    
     font-family: "Roboto", sans-serif;
     color: aliceblue;
     box-sizing: border-box;
@@ -17,7 +17,7 @@
 
 .features__title {
     font-size: 3rem;
-    padding-top: 2rem;
+    padding: 3rem 0;
     text-align: center;
 }
 
