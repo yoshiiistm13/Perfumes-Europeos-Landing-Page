@@ -2,7 +2,7 @@ header{
     height: 100vh;
     background-image:
         linear-gradient(to right, rgba(2, 66, 131, 1) 40%, rgba(2, 66, 131, 0) 100%),
-        url('/assets/Tienda\ BG.jfif');
+        url('/assets/Isla-BG.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
