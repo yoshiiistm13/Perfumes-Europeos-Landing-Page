@@ -3,7 +3,7 @@
    ========================================= */
 .features {
     background-color: #012e5c;
-    min-height: 100vh; /* Cambiado de height a min-height para que crezca de manera natural */
+    
     width: 100%;
     display: flex;
     flex-direction: column;

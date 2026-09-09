@@ -1,0 +1,41 @@
+.franchise{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+.franchise__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.franchise__title{
+    
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem;
+
+}
+
+.franchise__container-item img {
+    width: 100% !important;         /* Ocupa todo el ancho disponible de la tarjeta */
+    height: 220px !important;       /* Ajusta este valor al alto fijo que prefieras (ej. 200px, 250px) */
+    object-fit: cover !important;   /* Hace que la imagen actúe como "cover", llenando el cuadro sin deformarse */
+    display: block !important;
+    border-radius: 10px !important; /* Opcional: si quieres redondear ligeramente las esquinas de las fotos */
+    background-color: aliceblue;
+}
