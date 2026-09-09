@@ -1,4 +1,5 @@
 .franchise{
+    background-color: rgb(2, 66, 131);         /* Color base corporativo de fondo */
     width: 100%;
     display: flex;
     flex-direction: column;
