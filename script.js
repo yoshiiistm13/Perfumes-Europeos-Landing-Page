@@ -116,3 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnNext.addEventListener('click', moveNext);
     btnPrev.addEventListener('click', movePrev);
 });
+
+//Maps Tiendas
+
+const ubicacionesFranquicias = [
+    {
+        lat: 19.40907888688735,
+        log: -99.16793591627022,
+        tienda: "Insurgentes"
+    },
+]
+

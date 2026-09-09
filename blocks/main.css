@@ -19,9 +19,9 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 65px;  /* Ajustado ligeramente a 65px para que sea cómodo en mobile y desktop */
-    height: 65px;
-    z-index: 1000; /* Garantiza que esté siempre por encima de cualquier sección */
+    width: 90px;  /* Ajustado ligeramente a 65px para que sea cómodo en mobile y desktop */
+    height: 90px;
+    z-index: 10000; /* Garantiza que esté siempre por encima de cualquier sección */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

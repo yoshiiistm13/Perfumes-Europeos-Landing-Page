@@ -1,0 +1,25 @@
+.api{
+    height: 100vh;
+    max-width: 1200px ;
+    margin: 40px auto;
+    
+}
+
+.api__title{
+    font-size: 3rem;
+    padding: 3rem 0;
+    text-align: center
+}
+
+.api__container{
+    overflow: hidden;
+    background-color: aliceblue;
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.api__container iframe{
+    width: 100%;
+    height: 100%;
+}
