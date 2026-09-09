@@ -10,25 +10,33 @@
 }
 
 .franchise__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 20px;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
 }
 
 .franchise__title{
-    
     display: block;
     font-size: 3rem;
-    text-align: center;
+    text-align: right;
     padding: 3rem;
+}
 
+.franchise__container-item{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+    padding: 30px;
+    align-items: center;
+    transition: grid-template-columns 0.5s ease-in-out !important;
+}
+
+.franchise__container-item:hover {
+    grid-template-columns: 1.5fr 1fr !important; /* 👈 La imagen toma más espacio y el texto se comprime */
+    background-color: rgba(255, 0, 0, 0.75);
+    border-radius: 12px;
 }
 
 .franchise__container-item img {
@@ -38,4 +46,38 @@
     display: block !important;
     border-radius: 10px !important; /* Opcional: si quieres redondear ligeramente las esquinas de las fotos */
     background-color: aliceblue;
+    transition: all 0.5s ease-in-out !important;
+}
+
+.franchise__container-item:hover img {
+    height: 320px !important; /* 👈 La altura de la imagen crece considerablemente como en tu captura */
+    grid-template-columns: 1.5fr 1fr !important;
+}
+
+.franchise__container-title{
+    text-align: start;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.franchise__description{
+    display: flexbox;
+    flex-direction: column;
+    text-align: start;
+    gap: 20px;
+    transition: all 0.5s ease-in-out !important;
+}
+
+.franchise__container-item:nth-child(even) {
+    grid-template-columns: 3fr 1fr !important;
+}
+
+/* 👈 EL TRUCO CLAVE: Al hacer hover en la tarjeta roja, invertimos las proporciones 
+   para que la imagen (que está a la derecha) se expanda con la misma proporción (1fr 1.5fr) */
+.franchise__container-item:nth-child(even):hover {
+    grid-template-columns: 1fr 1.5fr !important; 
+}
+
+.franchise__container-item:nth-child(even) img {
+    order: 2 !important; /* La imagen se queda a la derecha */
 }
