@@ -1,6 +1,7 @@
 header {
     position: relative;
     overflow: hidden;
+    height: 100vh;
     min-height: 100vh;
     background-image:
         linear-gradient(to right, rgba(2, 66, 131, 1) 40%, rgba(2, 66, 131, 0) 100%),
@@ -19,6 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100vh;
     min-height: 100vh;
 }
 
@@ -209,11 +211,13 @@ header {
 
     .header__img-oso {
         
-        width: 26rem;
-margin-right: 1rem;
-        height: auto;
+       width: 100vw;       /* Ocupa el 100% del ancho de la ventana */
+       
+        max-width: none;    /* Elimina cualquier límite de ancho previo */
+        max-height: none;   /* Elimina cualquier límite de alto previo */
+        margin: 0;          /* Quita los márgenes anteriores que la encogían */
         display: block;
-        object-fit: contain;
-        margin-top: 8px;
+        object-fit: cover;  /* Clave: hace que la imagen cubra todo el espacio recortándose si es necesario para no deformarse */
+        
     }
 }
