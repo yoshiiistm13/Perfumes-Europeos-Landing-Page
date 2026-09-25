@@ -1,4 +1,6 @@
 header {
+    position: relative;
+    overflow: hidden;
     min-height: 100vh;
     background-image:
         linear-gradient(to right, rgba(2, 66, 131, 1) 40%, rgba(2, 66, 131, 0) 100%),
@@ -13,6 +15,7 @@ header {
 }
 
 .header__content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +23,10 @@ header {
 }
 
 .header__info {
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif;
@@ -44,7 +51,15 @@ header {
 }
 
 .header__img {
-    height: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .header__btn {
@@ -63,9 +78,10 @@ header {
 
 .header__img-oso {
     z-index: 1000;
-    width: 450px;
-    height: 675px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    object-position: right bottom;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -184,14 +200,17 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        right: auto;
+        bottom: auto;
         width: 100%;
         height: auto;
     }
 
     .header__img-oso {
         
-        max-width: 30rem;
-        margin-right:1.5rem;
+        width: 26rem;
+margin-right: 1rem;
         height: auto;
         display: block;
         object-fit: contain;
