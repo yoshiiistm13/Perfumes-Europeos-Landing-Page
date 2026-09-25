@@ -16,7 +16,7 @@ padding-bottom: 5rem;
 
 .roi__container{
     max-width: 1200px;
-    padding: 50px, 0, 30px;
+    padding: 50px 20px 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 70px;
@@ -37,6 +37,53 @@ padding-bottom: 5rem;
     font-weight: bold;
 }
 
+.roi__item p{
+    text-align: center;
+}
+
 .roi__item:hover{
     transform: translateY(-10px);
+}
+
+@media (min-width: 521px) and (max-width: 1024px) {
+    .roi {
+        padding: 0 0 48px;
+    }
+
+    .roi__title {
+        font-size: 2.4rem;
+        text-align: center;
+        padding: 40px 24px 24px;
+    }
+
+    .roi__container {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        padding: 16px 32px;
+    }
+}
+
+@media (max-width: 520px) {
+    .roi {
+        padding: 0 0 40px;
+    }
+
+    .roi__title {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 36px 16px 20px;
+    }
+
+    .roi__container {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 12px 24px;
+    }
+
+    .roi__item {
+        border-radius: 12px;
+        text-align: center;
+    }
 }

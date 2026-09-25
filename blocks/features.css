@@ -60,6 +60,27 @@
     box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .features {
+        padding: 32px 24px;
+    }
+
+    .features__title {
+        font-size: 2.4rem;
+        padding: 2rem 0;
+    }
+
+    .features__container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        padding: 1rem;
+    }
+
+    .features__container-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 560px;
+    }
+}
 
 /* =========================================
    MEDIA QUERY RESPONSIVE (MOBILE)

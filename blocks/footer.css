@@ -77,10 +77,35 @@
     margin-bottom: -5px; /* Acerca sutilmente el texto de abajo */
 }
 
-/* 📱 RESPONSIVO: Si la pantalla es menor a 768px (tablets y celulares), pasa de 4 columnas a 1 sola columna */
-@media (max-width: 768px) {
+.footer__ayco{
+ width: 100px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .footer__container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+    }
+
+    .footer__rights {
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 }

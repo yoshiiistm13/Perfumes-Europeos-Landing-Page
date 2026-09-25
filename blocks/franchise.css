@@ -83,3 +83,75 @@
 .franchise__container-item:nth-child(even) img {
     order: 2 !important; /* La imagen se queda a la derecha */
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .franchise__title {
+        font-size: 2.5rem;
+        padding: 2.5rem 2rem;
+    }
+
+    .franchise__container {
+        padding: 12px 24px;
+    }
+
+    .franchise__container-item {
+        gap: 28px;
+        padding: 24px;
+    }
+
+    .franchise__container-item img,
+    .franchise__container-item:hover img {
+        height: 240px !important;
+    }
+
+    .franchise__container-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .franchise {
+        padding: 0 0 48px;
+    }
+
+    .franchise__title {
+        width: 100%;
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 40px 16px 24px;
+    }
+
+    .franchise__container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .franchise__container-item,
+    .franchise__container-item:nth-child(even),
+    .franchise__container-item:hover,
+    .franchise__container-item:nth-child(even):hover {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .franchise__container-item img,
+    .franchise__container-item:nth-child(even) img,
+    .franchise__container-item:hover img {
+        order: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 10;
+    }
+
+    .franchise__container-title {
+        font-size: 1.6rem;
+    }
+
+    .franchise__description {
+        gap: 12px;
+    }
+}
